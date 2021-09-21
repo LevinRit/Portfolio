@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- The "head" section describes the properties of the webpage. -->
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +10,24 @@
         text-align: center;
         width: 1164px;
         margin: Auto}
+      .myDiv2 {
+        border: 15px outset tomato;
+        background-color: lightblue;
+        text-align: center;
+        width: 754px;
+        margin: Auto}
       .myDiv3 {
         border: 15px outset tomato;
         background-color: lightblue;
         text-align: center;
         width: 564px;
+        margin: Auto}
+     .myDiv4 {
+        border: 15px outset tomato;
+        background-color: lightblue;
+        text-align: center;
+        width: 350px;
+        height: 100px;
         margin: Auto}
 
 #topLeft, #topMiddle, #topRight, #middleLeft, #middleMiddle, #middleRight {
@@ -23,18 +35,26 @@
         width: 200px;
         height: 200px;
         float: left;
+        vertical-align: Center;
+        font-size: 88pt;
+        cursor: pointer;
         color: lightblue;}
 
       #topMiddle, #middleMiddle, #bottomMiddle {
         border-left: solid 4px tomato;
         border-right: solid 4px tomato;
         cursor: pointer;
+        font-size: 88pt;
+        vertical-align: Center ;
         color: lightblue;}
 
       #bottomLeft, #bottomMiddle, #bottomRight {      
         width: 200px;
         height: 200px;
         float: left ;
+        cursor: pointer;
+        font-size: 88pt;
+        vertical-align: Center;
         color: lightblue; 
       }
 
@@ -45,6 +65,38 @@
       }
       }
     </Style>
+
+   <script type="text/javascript">
+      
+      var player = "O";
+      var ptx = "1" 
+      var pto = "1"
+
+
+      function performMove(){
+
+       if (event.target.innerHTML == " " && player == "X") {
+        event .target.innerHTML = "X" 
+        player = "O"
+      }
+       else if (event.target.innerHTML == " " && player == "O") {
+        event.target.innerHTML = "O"
+        player = "X";
+      }
+      else if (event.target.innerHTML == "X" && player == "O" && pto == "1") {
+        event.target.innerHTML = " "
+        player = "X";
+        pto = "0"
+      }
+      else if (event.target.innerHTML == "O" && player == "X" && ptx == "1") {
+        event .target.innerHTML = " " 
+        player = "O";
+        ptx = "0"
+      }
+      else { }
+    }
+    </script>
+
     <title> Portfolio Levin Ritzen! </title>
   </head>
 
@@ -72,26 +124,36 @@
        </ul>
       </p>
     </Div>
-    <Br><Br><Br>
+    <Br><Br><Br><Br><Br>
      <Div Class="myDiv3">
-    <h1 style="font-family: cursive; font-size: 64; text-align: center;"> TicTacToe!</h1>
+    <h1 style="font-family: cursive; font-size: 64; text-align: center;"> TicTacToe But Its Covid This Time!</h1>
     </Div>
     <Br>
+    <Div class="myDiv2">
+<ul Style=" text-align: left; font-family: cursive;"> <i>
+         <li> Normal TicTacToe rules apply </li>
+         <li> Once per game you can remove one piece of the opposing player </li>
+         <li> Imagine that this is covid themed and the O's are covid and the X's are the vaccine. </li> </i>
+        </ul>
+      </Div>
+      <Br>
     <div id="container">
-      <div id="topLeft" ></div>
-      <div id="topMiddle"></div>
-      <div id="topRight" ></div>
+      <div id="topLeft" onclick="performMove()"> </div>
+      <div id="topMiddle" onclick="performMove()"> </div>
+      <div id="topRight" onclick="performMove()"> </div>
       <br>
-      <div id="middleLeft" ></div>
-      <div id="middleMiddle" ></div>
-      <div id="middleRight" ></div>
+      <div id="middleLeft" onclick="performMove()"> </div>
+      <div id="middleMiddle" onclick="performMove()"> </div>
+      <div id="middleRight" onclick="performMove()"> </div>
       <br>
-      <div id="bottomLeft" ></div>
-      <div id="bottomMiddle" ></div>
-      <div id="bottomRight" ></div>
+      <div id="bottomLeft" onclick="performMove()"> </div>
+      <div id="bottomMiddle" onclick="performMove()"> </div>
+      <div id="bottomRight" onclick="performMove()"> </div>
     </div> 
-    <Br><Br>
-  </p>
+    <Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br>
+  <Div Class="myDiv4">
+    <h1 style="font-family: cursive; font-size: 64; text-align: center;"> The End! </h1>
+    </Div>  
   </body>
 
 </html>
